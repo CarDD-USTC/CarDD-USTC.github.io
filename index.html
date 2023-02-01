@@ -1,42 +1,115 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-    <style>
-      .gray-background {
-        background-color: #e0e0e0; /* gray color */
-        padding: 5px; /* some padding for the text */
-      }
-      .images {
-        display: flex; /* align the images horizontally */
-        justify-content: space-between; /* distribute the space between the images evenly */
-      }
-      .images img {
-        width: 30%; /* set the width of the images */
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1 class="gray-background"><strong>Welcome to CarDD</strong></h1>
-      <div class="images">
-        <img src="Annotation_visualization.png" alt="image1">
-<!--         <img src="image2.jpg" alt="image2">
-        <img src="image3.jpg" alt="image3"> -->
-      </div>
-      <p>This is where the main content of the website will go.</p>
-    </main>
-    <footer>
-      <p>Copyright ©2022 My Website</p>
-    </footer>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CarDD: A New Dataset for Vision-based Car Damage Detection</title>
+
+    <!-- Meta tags for search engines to crawl -->
+    <meta name="robots" content="index,follow">
+    <meta name="description"
+          content="Automatic car damage detection has attracted significant attention in the car insurance business. However, due to the lack of high-quality and publicly available datasets, we can hardly learn a feasible model for car damage detection. To this end, we contribute with Car Damage Detection (CarDD), the first public large-scale dataset designed for vision-based car damage detection and segmentation. Our CarDD contains 4,000 high-resolution car damage images with over 9,000 wellannotated instances of six damage categories (examples are shown in Figure 1). We detail the image collection, selection, and annotation processes, and present a statistical dataset analysis. Furthermore, we conduct extensive experiments on CarDD with state-of-the-art deep methods for different tasks and provide comprehensive analyses to highlight the specialty of car damage detection. CarDD will be publicly available soon. "
+    >
+    <meta name="keywords" content="Car damage, New dataset, Object detection, Instance segmentation, Salient object detection (SOD)">
+    <link rel="author" href="Xinkuang Wang, Wenjing Li, Zhongcheng Wu">
+
+    <!-- Fonts and stuff -->
+    <link href="./css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./project.css" media="screen">
+    <link rel="stylesheet" type="text/css" media="screen" href="./iconize.css">
+    <script async="" src="./prettify.js"></script>
+
+</head>
+
+<body>
+<div id="content">
+    <div id="content-inner">
+
+        <div class="section head">
+            <h1>CarDD: A New Dataset for Vision-based Car Damage Detection</h1>
+            <div class="authors">
+                <a >Xinkuang Wang</a><sup>1,2</sup>&nbsp;
+                <a >Wenjing Li</a><sup>1,2</sup>&nbsp;
+                <a >Zhongcheng Wu</a><sup>1,2</sup>&nbsp;
+<!--                <a href="https://scholar.google.com/citations?user=OQMtSKIAAAAJ&hl=en">Enver Sangineto</a><sup>1</sup>&nbsp;-->
+<!--                <a href="https://scholar.google.com/citations?user=OQMtSKIAAAAJ&hl=en">Stéphane Lathuilière</a><sup>2</sup>&nbsp;-->
+            </div>
+
+            <div class="affiliations">
+                1. Chinese Academy of Sciences, China <br>
+                2. University of Science and Technology of China, China <br>
+            </div>
+
+            <div class="affiliations">
+                wangxk0624@mail.ustc.edu.cn
+            </div>
+        </div>
+
+        <center><img src="/img/Annotation_visualization.png" border="0" width="95%"><br>
+            Samples of annotated images in CarDD dataset.
+        </center>
+
+        <div class="section abstract">
+            <h2>Abstract</h2>
+            <br>
+            <p>Automatic car damage detection has attracted significant attention in the car insurance business. However, due to the lack of high-quality and publicly available datasets, we can hardly learn a feasible model for car damage detection. To this end, we contribute with Car Damage Detection (CarDD), the first public large-scale dataset designed for vision-based car damage detection and segmentation. Our CarDD contains 4,000 high-resolution car damage images with over 9,000 wellannotated instances of six damage categories (examples are shown in Figure 1). We detail the image collection, selection, and annotation processes, and present a statistical dataset analysis. Furthermore, we conduct extensive experiments on CarDD with state-of-the-art deep methods for different tasks and provide comprehensive analyses to highlight the specialty of car damage detection. CarDD will be publicly available soon.</p>
+
+        </div>
+
+
+        <div class="section method">
+            <h2>CarDD Overview</h2>
+            <br>
+            <center><img src="/img/Statistics.png" border="0" width="95%"><br>
+                Statistics of CarDD dataset.
+            </center>
+        </div>
+
+        <!--=================Materials==========================-->
+        <div class="section materials" , id="materials">
+            <h2>Materials</h2>
+            <table width="80%" align="center" border=none cellspacing="0" cellpadding="30">
+                <tr>
+                    <td width="30%">
+                        <center>
+                            <a href="/docs/CarDD.pdf" target="_blank" class="imageLink"><img
+                                    src="/img/CarDD_thumb.png" , width="75%"></a><br><br>
+                            <a href="/docs/CarDD.pdf" target="_blank">Paper</a>
+                        </center>
+                    </td>
+                    <td width="30%">
+                        <center>
+                            <a href="/docs/CarDD_Licensing.pdf" target="_blank" class="imageLink"><img
+                                    src="/img/googledrive.png", width="60%"></a><br><br>
+                            <a href="/docs/CarDD_Licensing.pdf" target="_blank">Dataset</a>
+                        </center>
+                    </td>
+                    <td width="30%" valign="middle">
+                        <center>
+                            <a href="https://github.com/CarDD-USTC/CarDD-USTC.github.io" target="_blank"
+                               class="imageLink"><img
+                                    src="/img/icon_github.png" , width="60%"></a><br><br>
+                            <a href="https://github.com/CarDD-USTC/CarDD-USTC.github.io" target="_blank">Codes</a>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+            NOTE: For downloading the data, please first fill in the licensing form and send us to get the link. <a href="/docs/CarDD_Licensing.pdf" target="_blank">[Licensing From]</a>
+        </div>
+
+
+        <br>
+
+        <div class="section citation">
+            <h2>Citation</h2>
+            <div class="section bibtex">
+      <pre>@InProceedings{CarDD-2022,
+    author    = {Wang, Xinkuang and Li, Wengjing and Wu, Zhongcheng},
+    title     = {CarDD: A New Dataset for Vision-based Car Damage Detection},
+    booktitle = {Under Review},
+    year      = {2022}
+}</pre>
+            </div>
+        </div>
+</body>
 </html>
