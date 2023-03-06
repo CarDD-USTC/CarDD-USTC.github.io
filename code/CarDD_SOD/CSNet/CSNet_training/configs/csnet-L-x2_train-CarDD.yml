@@ -1,0 +1,63 @@
+TASK: "csnet-L-x2_train-CarDD"
+
+GPU: 1
+
+MODEL:
+  ARCH: "csnet"
+  BASIC_SPLIT: [0.5,0.5]
+
+AUTO:
+  ENABLE: True
+  PREDEFINE: ''
+  FINETUNE: 300
+  EXPAND: 2.0
+  LOAD_WEIGHT: "FINETUNE"
+  FLOPS:
+    ENABLE: True
+    WEIGHT: 3.0
+    EXPAND: 1.0
+
+FINETUNE:
+  THRES: 1e-20
+
+LOSS:
+  MLOSS: 1
+
+DATA:
+  DIR: "/workspace/wangxinkuang/data/SOD/CarDD-CSNet/CarDD-TR"
+  PRETRAIN: ''
+  BATCH_SIZE: 16
+  WORKERS: 1
+  IMAGE_H: 224
+  IMAGE_W: 224
+  RESUME: ""
+
+VAL:
+  DIR: "/workspace/wangxinkuang/data/SOD/CarDD-CSNet/CarDD-VAL"
+
+TEST:
+  DATASET_PATH: '/workspace/wangxinkuang/data/SOD/CarDD/CarDD-TE/CarDD-TE-Image'
+  DATASETS: ['CarDD']
+  INTERVAL: 5
+  ENABLE: False
+  IMAGE_H: 224
+  IMAGE_W: 224
+  TESTALL: False
+  CHECKPOINT:  "/workspace/wangxinkuang/model/CSNet/csnet-L-x2_train-CarDD/checkpoint/checkpoint_epoch300.pth.tar"
+
+SOLVER:
+  METHOD: 'Adam_dynamic_weight_decay'
+  LR: 1e-4
+  ADJUST_STEP: True
+  STEPS: [400,500,600,700,800,900]
+  MAX_EPOCHS: 1000
+  FINETUNE:
+    METHOD: 'Adam'
+    LR: 1e-4
+    ADJUST_STEP: True
+    STEPS: [50,100,300,600,1200]
+
+PRUNE:
+  BNS: True
+  SHOW: True
+
