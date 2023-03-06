@@ -58,7 +58,7 @@ Environment requirement: Pytorch 1.7.0 + Python 3.8 + CUDA 11.0
     --checkpoint-file=$(WORK_PATH)/epoch_24.pth
     ```
 
-# Salient Damage detection
+# Salient Damage Detection
 
 ### Environment setup
 
@@ -120,7 +120,7 @@ If you found this code helpful, please consider citing:
 @article{cardd,
   title={CarDD: A New Dataset for Vision-based Car Damage Detection},
   author={Wang, Xinkuang and Li, Wenjing and Wu, Zhongcheng},
-  journal={arXiv preprint arXiv:2211.00945},
-  year={2022}
+  journal={Under Review},
+  year={2023}
 }
 ```
