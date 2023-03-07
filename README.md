@@ -19,6 +19,7 @@ Environment requirement: Pytorch 1.7.0 + Python 3.8 + CUDA 11.0
 
     ```
     git clone https://github.com/CarDD-USTC/CarDD-USTC.github.io.git
+	cd CarDD-USTC.github.io/code/CarDD_detection
     ```
 
 2. Prepare the environment:
@@ -31,22 +32,23 @@ Environment requirement: Pytorch 1.7.0 + Python 3.8 + CUDA 11.0
     ```
 
 ### Usage
-1. Download pretrained models at [Model Zoo](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/model_zoo.md) to $(MODEL_PATH).
+1. Download CarDD at [https://cardd-ustc.github.io/](https://cardd-ustc.github.io/).
+   Download pretrained models at [Model Zoo](https://github.com/open-mmlab/mmdetection/blob/master/docs/en/model_zoo.md) to $(MODEL_PATH).
+   
  
 2. Train:
     ```
-    cd $(CODE_PATH)/CarDD_detection/
-    python tools/train.py configs/car_damage/mask_rcnn_cfg.py --work-dir $(WORK_PATH)
+    python tools/train.py configs/car_damage/DCN_plus_cfg.py --work-dir $(WORK_PATH)
     ```
 
 3. Test:
     ```
-    python tools/test.py configs/car_damage/mask_rcnn_cfg.py $(WORK_PATH)/epoch_24.pth --eval bbox segm --options "classwise=True"
+    python tools/test.py configs/car_damage/DCN_plus_cfg.py $(WORK_PATH)/epoch_24.pth --eval bbox segm --options "classwise=True"
     ```
 
 4. Test and visualize:
     ```
-    python tools/test.py configs/car_damage/mask_rcnn_cfg.py $(WORK_PATH)/epoch_24.pth --show-dir $(VIS_PATH) --show-score-thr 0.7
+    python tools/test.py configs/car_damage/DCN_plus_cfg.py $(WORK_PATH)/epoch_24.pth --show-dir $(VIS_PATH) --show-score-thr 0.7
     ```
    
 5. Only inference:
@@ -54,7 +56,7 @@ Environment requirement: Pytorch 1.7.0 + Python 3.8 + CUDA 11.0
     python tools/inference.py \
     --img-path=$(IMG_PATH) \
     --save-path=$(SAVE_PATH) \
-    --config-file=configs/car_damage/mask_rcnn_cfg.py  \
+    --config-file=configs/car_damage/DCN_plus_cfg.py  \
     --checkpoint-file=$(WORK_PATH)/epoch_24.pth
     ```
 
