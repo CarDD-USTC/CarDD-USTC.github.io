@@ -119,7 +119,7 @@ Please refer to each repository:
 ## Citation
 If you found this code helpful, please consider citing: 
 ```
-@article{cardd,
+@article{CarDD,
   author={Wang, Xinkuang and Li, Wenjing and Wu, Zhongcheng},
   journal={IEEE Transactions on Intelligent Transportation Systems}, 
   title={CarDD: A New Dataset for Vision-Based Car Damage Detection}, 
