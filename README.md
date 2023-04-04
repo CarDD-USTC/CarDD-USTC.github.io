@@ -120,9 +120,13 @@ Please refer to each repository:
 If you found this code helpful, please consider citing: 
 ```
 @article{cardd,
-  title={CarDD: A New Dataset for Vision-based Car Damage Detection},
   author={Wang, Xinkuang and Li, Wenjing and Wu, Zhongcheng},
-  journal={Under Review},
-  year={2023}
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={CarDD: A New Dataset for Vision-Based Car Damage Detection}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-13},
+  doi={10.1109/TITS.2023.3258480}
 }
 ```
